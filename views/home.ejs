@@ -1,0 +1,15 @@
+<%- include("partials/header")%>
+
+<h1>Home</h1>
+<p><%= startingContent%></p>
+
+
+<% compositions.forEach(function(composition){ %>
+
+  <h1> <%=composition.title%></h1>
+  <p> <%=composition.post.substring(0, 100)%></p>
+  <a href= "/posts/<%= composition.title%>">Read more</a>
+
+<%});%>
+
+<%- include("partials/footer")%>
